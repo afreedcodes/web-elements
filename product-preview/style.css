@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+body {
+    font-family: Poppins;
+    background-color: #dee4ef;
+}
+
+:root {
+    /* Dark theme */
+    --primary: #5f27cd;
+    --secondary: #25273b;
+    --tertiary: #151728;
+    --text-light: #ffffff;
+
+    /* Light theme */
+    --text-dark: #1a1a1a;
+
+    /* Others */
+    --bright: #ffffff;
+    --grey: #858792;
+    --light-grey: #3b3d49;
+    --iris-ice: #dee4ef;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+    box-shadow: 0 0 0 0;
+    border-radius: 3rem;
+    border: 0;
+    outline: 0;
+    padding: 0.3rem 1rem;
+    font-weight: 450;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 20px 3px #5e27cd69;
+    transition: .3s ease-in;
+}
+
+.btn-primary:focus {
+    background-color: var(--primary);
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: var(--primary);
+    border: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--primary);
+    border: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0;
+}
+
+/* Product Overview */
+.product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 0 0;
+}
+
+.product-colm {
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 0;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.product-colm:hover {
+    height: 600px;
+}
+
+.product-container ::selection {
+    background-color: #EDC431;
+    color: #000;
+}
+
+.product-colm img {
+    height: 350px;
+    width: auto;
+    position: absolute;
+    top: 25%;
+    left: -10%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.product-colm .fries {
+    height: 320px;
+    width: 320px;
+    object-fit: contain;
+    left: 0;
+    top: 25%;
+}
+
+.product-colm:hover .product {
+    top: 45%;
+}
+
+.product-colm:hover .fries {
+    top: 50%;
+}
+
+.product-colm .card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-colm .card-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #99261c;
+    border-radius: 15px;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.product-colm:hover .card-bg::before {
+    background-color: #EDC431;
+    clip-path: circle(400px at center);
+}
+
+.product-colm .fries-bg::before {
+    background-color: #EDC431;
+}
+
+.product-colm:hover .fries-bg::before {
+    background-color: #99261c;
+}
+
+.product-colm:hover .fries-content {
+    color: #fff !important;
+}
+
+.product-colm:hover .fries-content a {
+    background-color: #EDC431;
+    color: #000;
+}
+
+.product-colm:hover .fries-content p {
+    color: var(--text-light);
+}
+
+.product-colm .content {
+    position: relative;
+    top: 20%;
+    text-align: left;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.7s;
+}
+
+.product-colm:hover .content {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    color: #000;
+}
+
+.product-colm .content h3 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.product-colm .content p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.product-colm .content a {
+    padding: 10px 25px;
+    text-decoration: none;
+    background-color: #99261c;
+    color: var(--text-light);
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+
+    /* Product Overview */
+    .product-container {
+        padding: 0 30px;
+    }
+
+    .product-colm {
+        height: 350px;
+        width: 650px;
+        margin: 20px 0;
+        overflow: visible;
+    }
+
+    .product-colm:hover {
+        height: 350px;
+    }
+
+    .product-colm img {
+        height: 400px;
+        width: auto;
+        top: -7%;
+        left: 20%;
+    }
+
+    .product-colm .fries {
+        height: 350px;
+        width: 350px;
+        top: 0%;
+        left: 25%;
+    }
+
+    .product-colm:hover .product {
+        height: 520px;
+        top: -10%;
+        left: 40%;
+    }
+
+    .product-colm:hover .fries {
+        height: 370px !important;
+        top: -05% !important;
+        left: 50%;
+    }
+
+    .product-colm {
+        flex-direction: row;
+    }
+
+    .product-colm .content {
+        width: 65%;
+        top: 0;
+        left: 20%;
+        padding-left: 30px;
+    }
+
+    .product-colm:hover .content {
+        top: 0;
+        left: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    /* Product Overview */
+    .product-container {
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .product-colm {
+        height: 300px;
+        width: 550px;
+        /* padding: 20px; */
+    }
+
+    .product-colm:hover .product {
+        height: 500px;
+        top: -30%;
+    }
+
+    .product-colm .content p {
+        font-size: 14px;
+    }
+}
