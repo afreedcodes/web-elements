@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+:root {
+    /* Dark theme */
+    --primary: #5f27cd;
+    --secondary: #dee4ef;
+    --tertiary: #151728;
+    --text-light: #ffffff;
+
+    /* Light theme */
+    --text-dark: #1a1a1a;
+
+    /* Others */
+    --bright: #ffffff;
+    --grey: #858792;
+    --light-grey: #3b3d49;
+    --iris-ice: #dee4ef;
+}
+
+.text {
+    font-size: .9rem;
+}
+
+.text-primary {
+    color: var(--primary)
+}
+
+.bg-primary {
+    background-color: var(--primary)
+}
+
+.btn {
+    width: auto;
+    padding: 2px 20px;
+    border-radius: 2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
+    outline: 0;
+}
+
+.btn-primary {
+    background: #5f27cd;
+    border: 2px solid #5f27cd;
+    color: var(--bright);
+}
+
+.btn-primary:hover {
+    background: #5e27cde5;
+    border: 2px solid #5e27cde5;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes l4 {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 890px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1090px;
+    }
+}

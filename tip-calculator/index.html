@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container flex1 lg:h-[100vh] pt-20 px-4 lg:p-0">
+        <div class="w-full lg:w-[90%] xl:w-[70%] bg-white rounded-2xl p-4 md:p-5 xl:p-10">
+            <h4 class="text-2xl font-semibold text-center mb-10">Tip Calculator</h4>
+            <div class="h-full md:h-[290px] flex1 flex-col md:flex-row items-start gap-5 md:gap-10 lg:gap-20">
+                <div class="h-full w-full md:w-[50%]">
+                    <h2 class="text-md font-semibold">Bill Total</h2>
+                    <div class="form-group flex justify-center items-end gap-2 p-0 mt-2 mb-6">
+                        <label class="font-bold" for="">₹</label>
+                        <input class="form-control border-b-2 border-primary" type="number" id="bill-amount"
+                            placeholder="0.00" onkeyup="myFunc()">
+                    </div>
+                    <h2 class="text-md font-semibold">Select Tip %</h2>
+                    <div class="form-group flex flex-wrap gap-2 p-0 mt-2 mb-6">
+                        <span
+                            class="w-[30%] bg-primary py-1.5 px-3 rounded-md text-white text-center font-semibold cursor-pointer tip-perc-btn"
+                            data-perc="5" onclick="updateTipPercentage(5)">5%</span>
+                        <span
+                            class="w-[30%] bg-primary py-1.5 px-3 rounded-md text-white text-center font-semibold cursor-pointer tip-perc-btn"
+                            data-perc="10" onclick="updateTipPercentage(10)">10%</span>
+                        <span
+                            class="w-[30%] bg-primary py-1.5 px-3 rounded-md text-white text-center font-semibold cursor-pointer tip-perc-btn"
+                            data-perc="15" onclick="updateTipPercentage(15)">15%</span>
+                        <span
+                            class="w-[30%] bg-primary py-1.5 px-3 rounded-md text-white text-center font-semibold cursor-pointer tip-perc-btn"
+                            data-perc="20" onclick="updateTipPercentage(20)">20%</span>
+                        <span
+                            class="w-[30%] bg-primary py-1.5 px-3 rounded-md text-white text-center font-semibold cursor-pointer tip-perc-btn"
+                            data-perc="25" onclick="updateTipPercentage(25)">25%</span>
+                        <span class="w-[30%] bg-primary py-1.5 px-3 rounded-md">
+                            <input class="w-full border-0 outline-0 bg-transparent text-white text-center font-semibold"
+                                type="number" placeholder="CUSTOM" id="tip-perc" onkeyup="myFunc()">
+                        </span>
+                    </div>
+                    <h2 class="text-md font-semibold">No of People</h2>
+                    <div class="form-group flex justify-center items-end gap-4 p-0 mt-2">
+                        <label for=""><i class="fa-solid fa-user"></i></label>
+                        <input class="w-full border-b-2 border-primary outline-0 bg-transparent px-2" type="number"
+                            id="person" value="1" onkeyup="myFunc()">
+                    </div>
+                </div>
+                <div
+                    class="w-full md:w-[50%] h-full flex flex-col justify-center items-start bg-iris-ice rounded-2xl p-5">
+                    <h2 class="text-md opacity-75">/ Person</h2>
+                    <div class="form-group flex justify-between items-start gap-2 p-0 mt-1 mb-6">
+                        <label class="font-bold" for="">Tip</label>
+                        <span class="text-3xl font-semibold text-end tip-amt">₹0.00</span>
+                    </div>
+                    <h2 class="text-md opacity-75">/ Person</h2>
+                    <div class="form-group flex justify-between items-start gap-2 p-0 mt-1 mb-6">
+                        <label class="font-bold" for="">Total</label>
+                        <span class="text-3xl font-semibold text-end total-amt">₹0.00</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="handleReset()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

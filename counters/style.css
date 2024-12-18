@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+    body {
+        background-color: #dee4ef;
+        font-family: Poppins;
+    }
+
+    :root {
+        /* Dark theme */
+        --primary: #5f27cd;
+        --secondary: #25273b;
+        --tertiary: #151728;
+        --text-light: #ffffff;
+
+        /* Light theme */
+        --text-dark: #1a1a1a;
+
+        /* Others */
+        --bright: #ffffff;
+        --grey: #858792;
+        --light-grey: #3b3d49;
+        --iris-ice: #dee4ef;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: var(--text-light);
+        box-shadow: 0 0 0 0;
+        border-radius: 3rem;
+        border: 0;
+        outline: 0;
+        padding: 0.3rem 1rem;
+        font-weight: 450;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--primary);
+        border: 0;
+        outline: 0;
+        box-shadow: 0 0 20px 3px #5e27cd69;
+        transition: .3s ease-in;
+    }
+
+    .btn-primary:focus {
+        background-color: var(--primary);
+        border: 0;
+        outline: 0;
+        box-shadow: 0 0 0 0;
+    }
+
+    .btn-primary.disabled,
+    .btn-primary:disabled {
+        color: #fff;
+        background-color: var(--primary);
+        border: 0;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show>.btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: var(--primary);
+        border: 0;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active:focus,
+    .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .show>.btn-primary.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0;
+    }
+
+
+    .count-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .counter-item {
+        width: 100%;
+        background-color: var(--bright);
+        border-radius: 0.5rem;
+        text-align: center;
+        border-bottom: 4px solid var(--primary);
+    }
+
+    .counter-item i {
+        font-size: 1.5rem;
+        color: var(--primary);
+    }
+
+    @media (min-width: 1024px) {
+        .sec-container {
+            height: 100vh;
+        }
+
+        .count-row {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .counter-item i {
+            font-size: 2rem;
+        }
+
+        .counter-item h2 {
+            font-size: 2.5rem;
+        }
+    }

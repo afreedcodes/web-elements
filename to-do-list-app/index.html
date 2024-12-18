@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="flex1">
+        <div class="container py-20 px-3 md:px-0 flex1">
+            <div class="todo-wrapper w-auto md:w-[80%] lg:w-[60%] bg-white rounded-lg py-6 px-3 md:px-6">
+                <h2 class="font-bold text-2xl">To-Do List App <i class="fa-solid fa-table-list text-primary ms-2"></i>
+                </h2>
+                <form class="w-full p-0 rounded-full bg-gray-200 mt-7" id="todo-form">
+                    <div class="form-group w-100 flex1 justify-between">
+                        <input type="text" class="form-control md:mx-3 m-0 bg-transparent" required>
+                        <button class="btn btn-primary py-2 w-20 lg:w-36 lg:py-3" type="submit">Add</button>
+                    </div>
+                </form>
+                <h6 class="my-4 text-lg">You have <strong class="text-bold text-primary pending-tasks-count">0</strong> task(s) to complete
+                </h6>
+                <nav class="flex1 justify-between text-sm mb-7">
+                    <ul class="nav-wrapper flex1 flex-wrap gap-4 text-gray-600">
+                        <li class="nav-item tracking-wide cursor-pointer active">All</li>
+                        <li class="nav-item tracking-wide cursor-pointer">Pending</li>
+                        <li class="nav-item tracking-wide cursor-pointer">Completed</li>
+                    </ul>
+                    <button class="btn btn-primary cursor-pointer" onclick="handleTasksFlush()">Clear All</button>
+                </nav>
+
+                <ul class="list-wrapper active gap-4" id="task-list">
+                    <!-- Display Dynamically -->
+                </ul>
+                <ul class="list-wrapper gap-4" id="pending-task-list">
+                    <!-- Display Dynamically -->
+                </ul>
+                <ul class="list-wrapper gap-4" id="completed-task-list">
+                    <!-- Display Dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+
+</html>

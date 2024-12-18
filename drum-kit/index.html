@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .drum-sec{
+            height: 100%;
+            width: 100%;
+            background-image: url('./uploads//pngtree-professional-drum-kits-from-drumzify-picture-image_2480949.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .drum-sec::before{
+            content: '';
+            position: absolute;
+            top: 0; left:0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: -1;
+        }
+
+        .key{
+            transition: all .7s ease;
+        }
+
+        .playing{
+            transform: scale(1.05);
+            border-color: #ff5a00;
+            box-shadow: 0 0 10px #ff5a00;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="drum-sec relative lg:h-[100vh] py-20 px-4 flex justify-center items-center">
+        <div class="container text-white flex flex-wrap justify-center items-center gap-4">
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="65"><strong class="text-2xl">A</strong> <span class="text-sm text-gray-400">clap</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="83"><strong class="text-2xl">S</strong> <span class="text-sm text-gray-400">hihat</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="68"><strong class="text-2xl">D</strong> <span class="text-sm text-gray-400">kick</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="70"><strong class="text-2xl">F</strong> <span class="text-sm text-gray-400">openhat</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="71"><strong class="text-2xl">G</strong> <span class="text-sm text-gray-400">boom</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="72"><strong class="text-2xl">H</strong> <span class="text-sm text-gray-400">ride</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="74"><strong class="text-2xl">J</strong> <span class="text-sm text-gray-400">snare</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="75"><strong class="text-2xl">K</strong> <span class="text-sm text-gray-400">tom</span></div>
+            <div class="key rounded-sm flex flex-col justify-center items-center px-10 py-5 border-2 border-primary" data-key="76"><strong class="text-2xl">L</strong> <span class="text-sm text-gray-400">tink</span></div>
+        </div>
+
+        <audio data-key="65" src="uploads/sounds/clap.wav"></audio>
+        <audio data-key="83" src="uploads/sounds/hihat.wav"></audio>
+        <audio data-key="68" src="uploads/sounds/kick.wav"></audio>
+        <audio data-key="70" src="uploads/sounds/openhat.wav"></audio>
+        <audio data-key="71" src="uploads/sounds/boom.wav"></audio>
+        <audio data-key="72" src="uploads/sounds/ride.wav"></audio>
+        <audio data-key="74" src="uploads/sounds/snare.wav"></audio>
+        <audio data-key="75" src="uploads/sounds/tom.wav"></audio>
+        <audio data-key="76" src="uploads/sounds/tink.wav"></audio>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
