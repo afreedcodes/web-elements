@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+body {
+    background-color: #dee4ef;
+    font-family: Poppins;
+}
+
+:root {
+    /* Dark theme */
+    --primary: #5f27cd;
+    --secondary: #25273b;
+    --tertiary: #151728;
+    --text-light: #ffffff;
+
+    /* Light theme */
+    --text-dark: #1a1a1a;
+
+    /* Others */
+    --bright: #ffffff;
+    --grey: #858792;
+    --light-grey: #3b3d49;
+    --iris-ice: #dee4ef;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+    box-shadow: 0 0 0 0;
+    border-radius: 3rem;
+    border: 0;
+    outline: 0;
+    padding: 0.3rem 1rem;
+    font-weight: 450;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 20px 3px #5e27cd69;
+    transition: .3s ease-in;
+}
+
+.btn-primary:focus {
+    background-color: var(--primary);
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: var(--primary);
+    border: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--primary);
+    border: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.quote-container {
+    height: auto;
+}
+
+.quote-wrapper {
+    width: 350px;
+    background: var(--bright);
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.quote-wrapper h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.quote-wrapper .quote-content {
+    margin: 30px 0;
+}
+
+.quote-wrapper .quote-content .quote-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-wrapper .quote-content .quote-area .quote {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+    margin-top: 25px;
+}
+
+.quote-area i {
+    font-size: 16px;
+}
+
+.quote-area i:first-child {
+    margin: 3px 0px 0 0;
+}
+
+.quote-area i:last-child {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+
+.quote-area p {
+    color: var(--dark);
+}
+
+.quote-content .author {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5px 0;
+}
+
+.quote-content .author .name {
+    font-size: 13px;
+}
+
+.quote-content .author span:first-child {
+    padding: 0 5px 10px 0;
+}
+
+.quote-wrapper .buttons .features {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--text-dark);
+    padding: 10px 0 0 0;
+}
+
+.quote-wrapper .buttons .features ul {
+    display: flex;
+    list-style: none;
+}
+
+.quote-wrapper .buttons .features ul li {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px;
+    padding: 7px;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.quote-wrapper .buttons .features ul li i {
+    font-size: 12px;
+    color: var(--bright);
+}
+
+.quote-wrapper .buttons .features button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .quote-wrapper {
+        width: 650px;
+    }
+
+    .quote-wrapper h2 {
+        font-size: 30px;
+    }
+
+    .quote-wrapper .quote-content .quote-area .quote {
+        font-size: 18px;
+    }
+
+    .quote-area i {
+        font-size: 18px;
+    }
+
+    .quote-area i:first-child {
+        margin: -3px 10px 0 0;
+    }
+
+    .quote-area i:last-child {
+        display: flex;
+        align-items: flex-end;
+        margin: 0 0 3px 10px;
+    }
+
+    .quote-content .author .name {
+        font-size: 15px;
+    }
+
+    .quote-wrapper .buttons .features {
+        padding: 20px 0 0 0;
+    }
+
+    .quote-wrapper .buttons .features ul li {
+        height: 40px;
+        width: 40px;
+    }
+
+    .quote-wrapper .buttons .features ul li i {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .quote-container {
+        height: 100vh;
+    }
+}
