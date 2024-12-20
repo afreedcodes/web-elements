@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container flex1 flex-col lg:h-[100vh] pt-20 px-4 lg:p-0">
+        <div class="w-full lg:w-[90%] xl:w-[70%] bg-white rounded-2xl p-4 md:p-5">
+            <div class="w-full form-group">
+                <textarea class="form-control border rounded-2xl p-3 lg:p-4 xl:p-6" placeholder="Start Typing Here..."
+                    rows="15" name="" id="paragraph-textarea"></textarea>
+            </div>
+        </div>
+        <ul class="w-full lg:w-[90%] xl:w-[70%] flex justify-center items-center gap-5 -mt-12">
+            <li class="w-full lg:w-[30%] flex1 flex-col gap-3 bg-gradient-to-b from-white to-purple-500 rounded-lg p-4">
+                <Strong class="text-3xl md:text-4xl word-count">0</Strong>
+                <span class="text-md uppercase font-semibold">Word</span>
+            </li>
+            <li class="w-full lg:w-[30%] flex1 flex-col gap-3 bg-gradient-to-b from-white to-purple-500 rounded-lg p-4">
+                <Strong class="text-3xl md:text-4xl character-count">0</Strong>
+                <span class="text-md uppercase font-semibold">Character</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
