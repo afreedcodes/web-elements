@@ -55,6 +55,7 @@ body {
     color: #fff;
     background-color: var(--primary);
     border: 0;
+    opacity: .8;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,

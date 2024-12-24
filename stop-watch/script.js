@@ -45,14 +45,20 @@ const clearStopWatch = () => {
 }
 
 startBtn.addEventListener("click", () => {
-    startStopWatch()
+    stopBtn.removeAttribute("disabled", "");
+    startStopWatch();
+    startBtn.setAttribute("disabled", "");
 });
 
 stopBtn.addEventListener("click", () => {
+    startBtn.removeAttribute("disabled", "");
     clearStopWatch();
+    stopBtn.setAttribute("disabled", "");
 });
 
 resetBtn.addEventListener("click", () => {
+    stopBtn.removeAttribute("disabled", "");
+    startBtn.removeAttribute("disabled", "");
     clearStopWatch()
     miliCounter = 0; miliseconds.innerText = "00";
     secCounter = 0; seconds.innerText = "00";
