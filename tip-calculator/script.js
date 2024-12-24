@@ -4,19 +4,20 @@ function myFunc() {
     let person = parseFloat(document.getElementById('person').value) || 1;
 
     let tip = (bill / 100) * tipPerc / person;
-    let total = tip + bill;
+
+    let totalBill = (bill / person) + tip;
 
     // Display the tip and total amounts in the respective spans
     document.querySelector('.tip-amt').textContent = "₹" + tip.toFixed(2);
-    document.querySelector('.total-amt').textContent = "₹" + total.toFixed(2);
+    document.querySelector('.total-amt').textContent = "₹" + totalBill.toFixed(2);
 }
 
 function updateTipPercentage(percentage) {
     document.getElementById('tip-perc').value = percentage;
-    myFunc(); 
+    myFunc();
 }
 
-function handleReset(){
+function handleReset() {
     window.location.reload()
 }
 
