@@ -1,21 +1,30 @@
-let display = document.getElementById("display");
+let display = document.getElementById("display"),
+      buttons = document.querySelectorAll("span");
 
-function appendToDisplay(input) {
-    display.value += input;
-}
+    const specialChar = ["%", "*", "/", "-", "+", "="];
+    let output = "";
 
-function clearDisplay() {
-    display.value = ""
-}
+    function calculateValues(btnValue) {
+      display.focus();
+      if (btnValue === "=" && output !== "") {
+        //If output has '%', replace with '/100' before evaluating.
+        output = eval(output.replace("%", "/100"));
+      } else if (btnValue === "AC") {
+        output = "";
+      } else if (btnValue === "DEL") {
+        //If DEL button is clicked, remove the last character from the output.
+        output = output.toString().slice(0, -1);
+      } else {
+        //If output is empty and button is specialChars then return
+        if (output === "" && specialChar.includes(btnValue)) return;
+        output += btnValue;
+      }
 
-function calcOperation() {
-    try {
-        display.value = eval(display.value)
-    } catch (err) {
-        display.value = "Error"
+      display.value = output
     }
-}
 
-function deletePrev() {
-    display.value = display.value.slice(0, -1);
-}
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        calculateValues(e.target.dataset.value);
+      })
+    })
