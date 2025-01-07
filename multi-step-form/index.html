@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <main>
+        <div class="container flex1 py-20 px-4 lg:p-0 lg:h-[100vh]">
+            <div
+                class="w-full lg:w-[90%] xl:w-[70%] lg:h-[75vh] xl:h-[70%] min-[1440px]:h-[65vh] flex1 items-start flex-col lg:flex-row rounded-2xl overflow-hidden">
+                <div
+                    class="relative sd-wrapper w-full h-full  lg:w-[35%] flex flex-col justify-start items-start p-6 pb-20 lg:pb-6 text-white">
+                    <i class="fa-solid fa-forward-step bg-primary text-md text-white p-2.5 px-3 rounded-full"></i>
+                    <h2 class="text-[1.3rem] font-bold my-3">Step <span class="step-count-txt">1</span></h2>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, incidunt?
+                    </p>
+                    <ul class="step-progress-wrapper hidden lg:flex flex-col justify-start gap-10 select-none mt-10">
+                        <li class="active">
+                            <span class="step-count">01</span>
+                            <span class="text-sm lg:text-[1rem]">Personal Information</span>
+                        </li>
+                        <li>
+                            <span class="step-count">02</span>
+                            <span class="text-sm lg:text-[1rem]">Education</span>
+                        </li>
+                        <li>
+                            <span class="step-count">03</span>
+                            <span class="text-sm lg:text-[1rem]">Work Experience</span>
+                        </li>
+                        <li>
+                            <span class="step-count">04</span>
+                            <span class="text-sm lg:text-[1rem]">Account Information</span>
+                        </li>
+                    </ul>
+                    <div class="custom-shape-divider-bottom-1735023271">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                                opacity=".25" class="shape-fill"></path>
+                            <path
+                                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                                opacity=".5" class="shape-fill"></path>
+                            <path
+                                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                                class="shape-fill"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative w-full h-full lg:w-[70%] flex flex-col justify-start items-start bg-white p-6">
+                    <div class="w-full" id="reg-form">
+                        <!-- Step 1 -->
+                        <div class="mb-5 step-form">
+                            <i class="fa-solid fa-user bg-primary text-md text-white p-2.5 px-3 rounded-full"></i>
+                            <h2 class="text-[1.3rem] font-bold my-3">Personal Information</h2>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
+                                incidunt?</p>
+                            <div class="mt-10">
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">first name <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i> </label>
+                                        <input class="form-control" type="text" name="firstname" onchange="validateFields()">
+                                        <span class="fname-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">last name <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                        <input class="form-control" type="text" name="lastname" onchange="validateFields()">
+                                        <span class="lname-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">contact no <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                        <input class="form-control" type="number" name="contact-no" onchange="validateFields()">
+                                        <span class="cono-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">alternate contact no <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                        <input class="form-control" type="number" name="alt-contact-no" onchange="validateFields()">
+                                        <span class="acono-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">country</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">city</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="mb-5 step-form">
+                            <i
+                                class="fa-solid fa-graduation-cap bg-primary text-md text-white p-2.5 px-3 rounded-full"></i>
+                            <h2 class="text-[1.3rem] font-bold my-3">Education</h2>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
+                                incidunt?</p>
+                            <div class="mt-10">
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">school name <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                        <input class="form-control" type="text" name="school-name" onchange="validateFields()">
+                                        <span class="sn-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">board name </label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="w-full form-group mb-3">
+                                    <label class="capitalize" for="">college / university name <i
+                                            class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                    <input class="form-control" type="text" name="university-name" onchange="validateFields()">
+                                    <span class="cu-err-txt text-xs text-red-600"></span>
+                                </div>
+                                <div class="w-full form-group mb-3">
+                                    <label class="capitalize" for="">select course </label>
+                                    <select class="form-control bg-white">
+                                        <option>Select</option>
+                                        <option>BCA</option>
+                                        <option>B-TECH</option>
+                                        <option>BA</option>
+                                        <option>B-COM</option>
+                                        <option>B-SC</option>
+                                        <option>MBA</option>
+                                        <option>MCA</option>
+                                        <option>M-COM</option>
+                                        <option>M-TECH</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="mb-5 step-form">
+                            <i class="fa-solid fa-briefcase bg-primary text-md text-white p-2.5 px-3 rounded-full"></i>
+                            <h2 class="text-[1.3rem] font-bold my-3">Work Experience</h2>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
+                                incidunt?</p>
+                            <div class="mt-10">
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">experience 1</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">position</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">experience 2</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">position</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">experience 3</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">position</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="mb-5 step-form">
+                            <i
+                                class="fa-solid fa-unlock-keyhole bg-primary text-md text-white p-2.5 px-3 rounded-full"></i>
+                            <h2 class="text-[1.3rem] font-bold my-3">Account Information</h2>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
+                                incidunt?</p>
+                            <div class="mt-10">
+                                <div class="flex flex-col md:flex-row gap-4 mb-3">
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">email <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                        <input class="form-control" type="email" name="email" onchange="validateFields()">
+                                        <span class="email-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                    <div class="w-full form-group">
+                                        <label class="capitalize" for="">username <i
+                                                class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                        <input class="form-control" type="text" name="username" onchange="validateFields()">
+                                        <span class="username-err-txt text-xs text-red-600"></span>
+                                    </div>
+                                </div>
+                                <div class="w-full form-group mb-3">
+                                    <label class="capitalize" for="">password <i
+                                            class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                    <input class="form-control" type="password" name="password" onchange="validateFields()">
+                                    <span class="pass-err-txt text-xs text-red-600"></span>
+                                </div>
+                                <div class="w-full form-group mb-3">
+                                    <label class="capitalize" for="">confirm password <i
+                                            class="fa-solid fa-asterisk text-red-600 absolute pl-1"></i></label>
+                                    <input class="form-control" type="password" name="confirm-password" onchange="validateFields()">
+                                    <span class="cpass-err-txt text-xs text-red-600"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Finish status -->
+                        <div class="step-form text-center py-5">
+                            <div class="w-full flex flex-col justify-center items-center">
+                                <img class="h-60 w-60 object-cover" src="./image.avif" alt="">
+                            </div>
+                            <h2 class="font-bold text-2xl mt-4">Thank You</h2>
+                            <p class="mt-4">Your submission has been sent</p>
+                            <button class="btn btn-primary py-2 px-5 mt-4 capitalize" onClick="window.location.reload()">Go to home</button>
+                        </div>
+
+                        <button class="prev-step-btn btn btn-lg btn-outline py-2 px-8 xl:px-10" type="button" onclick="prevStep(-1)">Back</button>
+                        <button class="next-step-btn btn btn-lg btn-primary py-2 px-8 xl:px-10" type="button" onclick="nextStep(1)">Next Step</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
