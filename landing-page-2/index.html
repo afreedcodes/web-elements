@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <main>
+        <header class="bg-black text-white py-6 md:py-6 px-4">
+            <div class="container flex-1 gap-2 justify-between" id="header-con">
+                <h4 class="text-2xl font-semibold">Digittery<strong>.</strong></h4>
+                <ul class="nav hidden md:flex gap-2.5 xl:gap-8 text-sm">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#story-sec">About</a></li>
+                    <li><a href="#projects-sec">Portfolio</a></li>
+                    <li><a href="#blogs-sec">Blogs</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+                <div class="s-links flex gap-4 md:gap-3 text-md">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </header>
+
+        <section class=" bg-black py-20 px-6 md:py-24 md:px-0 lg:py-0">
+            <div class="hero-sec container flex-1 flex-col lg:flex-row" id="hero-con">
+                <div class="w-full lg:w-[50%]">
+                    <span
+                        class="bg-primary text-sm text-white font-semibold py-1 px-4 rounded-full capitalize">Catherine
+                        Bowman</span>
+                    <h2 class="heading lg:hidden text-white capitalize my-3">Freelance digital marketing <br> expert
+                    </h2>
+                    <h2 class="heading text-white hidden lg:block font-bold capitalize my-6">Freelance digital <br>
+                        marketing
+                        expert
+                    </h2>
+                    <p class="md:w-[60%] lg:w-full xl:w-[80%] text-sm text-gray-300 leading-7">Lorem ipsum dolor, sit
+                        amet
+                        consectetur corrupti blanditiis sunt consequatur fugit magni, similique explicabo?</p>
+                    <button class="btn btn-primary mt-8">More about me</button>
+                    <button class="btn text-white mt-8">View portfolio</button>
+                </div>
+                <div class="w-full lg:w-[50%] flex-1 lg:justify-end pt-10 lg:pt-0">
+                    <div class="hero-image-wrapper">
+                        <img class="h-full w-full object-cover object-center" src="./images/hero-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full" id="story-sec">
+            <div
+                class="container flex-1 flex-col xl:flex-row gap-10 xl:gap-4 pt-20 pb-10 md:pt-24 md:pb-14 lg:pt-32 lg:pb-20 px-6 md:px-0">
+                <div class="relative w-full xl:order-2 xl:w-[50%] xl:pl-10">
+                    <h4 class="sub-heading capitalize">Our story</h4>
+                    <h2 class="heading-2 my-3">A professional writer makes a big difference</h2>
+                    <p class="p-text text-sm text-gray-600 leading-7">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit.
+                        Repudiandae dolorum cupiditate voluptatibus odio maiores quam temporibus vitae, non corrupti
+                        assumenda rem obcaecati dolores aperiam debitis. Ipsum quidem atque aperiam voluptatibus?</p>
+                    <div class="iconbox-wrapper mt-8 flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 justify-start gap-6">
+                            <i class="fa-solid fa-users text-lg text-primary"></i>
+                            <span>
+                                <h4 class="text-sm font-semibold mb-1">Customer Experience</h4>
+                                <p class="text-xs opacity-75">Turpis facilisis lectus dui suscipit.</p>
+                            </span>
+                        </div>
+                        <div class="flex-1 justify-start gap-6">
+                            <i class="fa-solid fa-swatchbook text-lg text-primary"></i>
+                            <span>
+                                <h4 class="text-sm font-semibold mb-1">Engineering & Design</h4>
+                                <p class="text-xs opacity-75">Faucibus magnis efficitur ante felis.</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative md:min-h-[550px] lg:min-h-[650px] xl:min-h-[450px] w-full xl:w-[50%] flex-1 justify-between items-end overflow-hidden">
+                    <img class="img-1 lg:absolute bottom-0 left-16 xl:left-28 w-full lg:w-[70%] xl:w-[80%] z-10"
+                        src="./images/story-1.jpg"
+                        alt="">
+                    <img class="img-2 hidden lg:inline absolute top-0 right-0 xl:right-28 h-[650px] xl:h-[450px] w-full lg:w-[70%] xl:w-[80%] object-cover"
+                        src="./images/story-2.jpg"
+                        alt="">
+                    <div class="circle hidden lg:block">
+                        <div class="text">
+                            <p class="capitalize">about us - about us - about us - </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="container flex-1 flex-col md:flex-row flex-wrap gap-5 xl:gap-0 pb-20 px-6 md:pb-24 md:px-0 lg:pb-32"
+            id="impact-sec">
+            <div class="w-full md:w-[48%] xl:w-[25%]">
+                <h2 class="text-sm text-gray-600 font-semibold uppercase tracking-wider mb-3">Year experience</h2>
+                <span class="text-4xl font-bold">09<strong>+</strong></span>
+            </div>
+            <div class="w-full md:w-[48%] xl:w-[25%]">
+                <h2 class="text-sm text-gray-600 font-semibold uppercase tracking-wider mb-3">Honors and awards</h2>
+                <span class="text-4xl font-bold">12<strong>+</strong></span>
+            </div>
+            <div class="w-full md:w-[48%] xl:w-[25%]">
+                <h2 class="text-sm text-gray-600 font-semibold uppercase tracking-wider mb-3">Completed projects</h2>
+                <span class="text-4xl font-bold">167<strong>+</strong></span>
+            </div>
+            <div class="w-full md:w-[48%] xl:w-[25%]">
+                <h2 class="text-sm text-gray-600 font-semibold uppercase tracking-wider mb-3">Happy customers</h2>
+                <span class="text-4xl font-bold">289<strong>+</strong></span>
+            </div>
+        </section>
+
+        <section class="w-full bg-black py-20 px-6 md:py-24 md:px-0 lg:py-32" id="projects-sec">
+            <div class="container flex-1 flex-col lg:flex-row lg:gap-5 text-white mb-10" id="projects-con">
+                <div class="w-full xl:w-[50%]">
+                    <h4 class="sub-heading capitalize">Our portfolio</h4>
+                    <h2 class="heading-2">The digital future is just around the corner</h2>
+                </div>
+                <div class="w-full xl:w-[50%]">
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos repellat
+                        perspiciatis culpa
+                        veritatis assumenda cupiditate explicabo! Qui ex dicta rem est libero aliquam incidunt, error
+                        suscipit magni quam. Voluptatum, corporis.</p>
+                    <button class="btn btn-primary mt-4">View all portfolio</button>
+                </div>
+            </div>
+            <div class="p-wrapper flex-1 gap-5 overflow-x-hidden">
+                <div class="card-item group" style="--card-img: url(./images/p-img-1.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Merch for ML studio</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">content
+                        strategy</span>
+                </div>
+                <div class="card-item group" style="--card-img: url(./images/p-img-2.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Pots for vase "Mimosa"</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">smm</span>
+                </div>
+                <div class="card-item group" style="--card-img: url(./images/p-img-3.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Psalms</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">copywrite</span>
+                </div>
+                <div class="card-item group" style="--card-img: url(./images/p-img-4.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Bright pringts</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">smm</span>
+                </div>
+                <div class="card-item group" style="--card-img: url(./images/p-img-5.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Design literature</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">design</span>
+                </div>
+                <div class="card-item group" style="--card-img: url(./images/p-img-6.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Minimal project book</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">content
+                        strategy</span>
+                </div>
+                <div class="card-item group" style="--card-img: url(./images/p-img-7.jpg)">
+                    <h3
+                        class="inline md:hidden group-hover:inline text-lg text-white font-semibold bg-black py-1 px-3 mb-3">
+                        Workspace</h3>
+                    <span
+                        class="inline md:hidden group-hover:inline text-xs text-primary font-semibold uppercase bg-black py-1 px-2">copywrite</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-20 px-6 md:py-24 md:px-0 lg:py-32" id="blogs-sec">
+            <div class="container flex-1 flex-col lg:flex-row lg:gap-5 mb-10" id="">
+                <div class="w-full xl:w-[50%]">
+                    <h4 class="capitalize">Our blogs</h4>
+                    <h2 class="heading-2">Most popular blog publication</h2>
+                </div>
+                <div class="w-full xl:w-[50%]">
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos repellat
+                        perspiciatis culpa
+                        veritatis assumenda cupiditate explicabo! Qui ex dicta rem est libero aliquam incidunt, error
+                        suscipit magni quam. Voluptatum, corporis.</p>
+                    <button class="btn btn-primary mt-4">View all blogs</button>
+                </div>
+            </div>
+            <div class="blogs-wrapper container flex-1 justify-start flex-col md:flex-row flex-wrap gap-5 mt-20">
+                <div class="w-full md:w-[48%] xl:w-[32%]">
+                    <img class="w-full h-80 object-cover" src="./images/blog-1.jpg"
+                        alt="">
+                    <div class="p-4">
+                        <div class="text-sm font-semibold tracking-wider uppercase mb-3">
+                            <span class="text-primary">art -</span>
+                            <span class="text-gray-600">april 2, 2024</span>
+                        </div>
+                        <h3 class="text-lg capitalize font-bold">Play to your strengths and supercharge your business
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full md:w-[48%] xl:w-[32%]">
+                    <img class="w-full h-80 object-cover" src="./images/blog-2.jpg"
+                        alt="">
+                    <div class="p-4">
+                        <div class="text-sm font-semibold tracking-wider uppercase mb-3">
+                            <span class="text-primary">marketing -</span>
+                            <span class="text-gray-600">october 6, 2024</span>
+                        </div>
+                        <h3 class="text-lg capitalize font-bold">7 Steps to create an outstanding marketing plan</h3>
+                    </div>
+                </div>
+                <div class="w-full md:w-[48%] xl:w-[32%]">
+                    <img class="w-full h-80 object-cover" src="./images/blog-3.jpg"
+                        alt="">
+                    <div class="p-4">
+                        <div class="text-sm font-semibold tracking-wider uppercase mb-3">
+                            <span class="text-primary">content -</span>
+                            <span class="text-gray-600">november 18, 2024</span>
+                        </div>
+                        <h3 class="text-lg capitalize font-bold">10 content proofreading tips to catch more avoidable
+                            goofs</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative w-full text-center" id="cta-sec">
+            <div class="flex flex-wrap px-6 pb-6 lg:p-0 gap-0">
+                <img class="w-[33%] lg:h-48 lg:w-[16.6%] lg:h-60 min-[1440px]:h-80 object-cover"
+                    src="./images/cta-1.png" alt="">
+                <img class="w-[33%] lg:h-48 lg:w-[16.6%] lg:h-60 min-[1440px]:h-80 object-cover"
+                    src="./images/cta-2.png" alt="">
+                <img class="w-[33%] lg:h-48 lg:w-[16.6%] lg:h-60 min-[1440px]:h-80 object-cover"
+                    src="./images/cta-3.png" alt="">
+                <img class="w-[33%] lg:h-48 lg:w-[16.6%] lg:h-60 min-[1440px]:h-80 object-cover"
+                    src="./images/cta-4.png" alt="">
+                <img class="w-[33%] lg:h-48 lg:w-[16.6%] lg:h-60 min-[1440px]:h-80 object-cover"
+                    src="./images/cta-5.png" alt="">
+                <img class="w-[33%] lg:h-48 lg:w-[16.6%] lg:h-60 min-[1440px]:h-80 object-cover"
+                    src="./images/cta-6.png" alt="">
+            </div>
+            <button class="follow-btn btn btn-primary tracking-wider">
+                <i class="fa-brands fa-instagram me-4"></i>
+                Follow us on instagram
+            </button>
+        </section>
+
+        <section class="w-full bg-black text-white py-20 px-6 md:py-24 md:px-0 lg:py-32" id="footer">
+            <div class="container flex-1 flex-col lg:flex-row lg:gap-5 mb-10" id="">
+                <div class="w-full xl:w-[50%]">
+                    <h4 class="capitalize">contact</h4>
+                    <h2 class="heading-2">Get in touch</h2>
+                </div>
+                <div class="w-full xl:w-[50%]">
+                    <div class="iconbox-wrapper mt-8 flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 justify-start gap-6">
+                            <i class="fa-solid fa-envelopes-bulk text-lg text-primary"></i>
+                            <span>
+                                <h4 class="text-sm font-semibold mb-1">digittery.inbox@example.com</h4>
+                                <p class="text-xs opacity-75">Support email</p>
+                            </span>
+                        </div>
+                        <div class="flex-1 justify-start gap-6">
+                            <i class="fa-solid fa-phone text-lg text-primary"></i>
+                            <span>
+                                <h4 class="text-sm font-semibold mb-1">+91 888 999 222</h4>
+                                <p class="text-xs opacity-75">Call 24/7</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-10">
+                <form action="">
+                    <div class="flex flex-col md:flex-row gap-4 mb-4">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input class="form-control" type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Subject</label>
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Message</label>
+                        <textarea class="form-control" name="" id="" rows="7"></textarea>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <p class="text-sm opacity-75">*We promise not to disclose your personal information to third
+                            parties</p>
+                        <button class="btn btn-primary mt-4 md:m-0">Send message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container mt-8">
+                <hr>
+                <div class="flex flex-col md:flex-row justify-between mt-5">
+                    <h4 class="text-2xl font-semibold">Digittery<strong>.</strong></h4>
+                    <div class="s-links flex gap-4 md:gap-3 text-md">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
