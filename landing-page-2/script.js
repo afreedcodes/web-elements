@@ -3,9 +3,9 @@ const section1 = () => {
 
     let tl = gsap.timeline();
 
-    tl.from("#header-con h4, #header-con .nav, #header-con .s-links", {
-        y: -30,
-        duration: .4,
+    tl.from("#header-con", {
+        y: -60,
+        duration: 1,
         delay: 0,
         stagger: .2,
         opacity: 0,
@@ -32,8 +32,6 @@ const section2 = () => {
     // # Story section
     let textEle = document.querySelector(".text p");
 
-    console.log(textEle.innerText.split(""));
-
     textEle.innerHTML = textEle.innerText.split("").map((char, idx) => {
         return `<span style="transform: rotate(${idx * 11}deg)">${char}</span>`
     }).join("");
@@ -45,7 +43,7 @@ const section2 = () => {
         scrollTrigger: {
             trigger: "#story-sec",
             scroller: "body",
-            start: "top 40%"
+            start: "top 40%",
         }
     })
 
