@@ -80,6 +80,7 @@ body {
 .tabs-container {
     width: auto;
     position: relative;
+    border-radius: 10px;
     background: var(--bright);
 }
 
@@ -279,10 +280,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .tabs-container {
-        border-radius: 10px;
     }
 
     .tab-header {
