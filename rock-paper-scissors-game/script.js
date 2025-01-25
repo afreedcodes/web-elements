@@ -43,9 +43,12 @@ const rpsFunc = (btn) => {
                 if (botScore > userScore) {
                     modalImgEle.src = "./images/emoji-bot.jpg"
                     modalTextEle.textContent = "Bot Wins!"
-                } else {
+                } else if (userChoice > botChoice) {
                     modalImgEle.src = "./images/emoji-partying.jpg"
                     modalTextEle.textContent = "Congrats You Win!"
+                } else {
+                    modalImgEle.src = "./images/emoji-nothing.png"
+                    modalTextEle.textContent = "Nobody Wins!"
                 }
             }, 3000)
         }
