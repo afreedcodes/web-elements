@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="modal fixed top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.4)] flex hidden justify-center items-center px-4 z-10">
+        <div class="w-full md:w-[50%] lg:w-[40%] xl:w-[30%] flex flex-col justify-center items-center bg-white rounded-lg py-10 xl:py-20">
+            <img class="w-32 mb-4" src="./images/emoji-partying.jpg" alt="">
+            <h4 class="text-2xl font-bold">Bot Wins!</h4>
+            <button class="btn btn-lg btn-primary mt-5 py-2 px-8" onclick="window.location.reload()">Play Again</button>
+        </div>
+    </div>
+    <div class="container flex-1 flex-col select-none py-20 px-6 lg:p-0 lg:pt-20">
+        <div class="text-center mb-14">
+            <h4 class="text-[1.4rem] lg:text-2xl font-semibold mb-2">Rock, Paper, or Scissors?</h4>
+            <p class="text-sm">A bot has challenged you to a game.</p>
+        </div>
+        <div class="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] flex justify-evenly gap-4">
+            <div class="w-[25%] flex flex-col justify-start items-center">
+                <h4 class="text-primary text-lg font-semibold mb-2">You</h4>
+                <span class="user-score-txt">0</span>
+            </div>
+            <div class="w-full flex justify-between outline-4 outline-dashed lg:py-5">
+                <span class="h-[100px] lg:h-[130px] img-left">
+                    <img class="h-full w-full" src="./images/rock.png" alt="">
+                </span>
+                <span class="h-[100px] lg:h-[130px] img-right">
+                    <img class="h-full w-full" src="./images/rock.png" alt="">
+                </span>
+            </div>
+            <div class="w-[25%] flex flex-col justify-start items-center">
+                <h4 class="text-primary text-lg font-semibold mb-2">Bot</h4>
+                <span class="bot-score-txt">0</span>
+            </div>
+        </div>
+        <div class="mt-14">
+            <h2 class="result-txt text-lg lg:text-2xl font-bold">Lets Play!</h2>
+        </div>
+        <ul class="flex gap-4 md:gap-8 my-10 ">
+            <li
+                class="rps-img h-[100px] xl:h-[130px] min-[1640px]:h-[150px] lg:opacity-75 lg:hover:opacity-100 transition cursor-pointer p-2 bg-white rounded-full" data-choice="Rock">
+                <img class="h-full w-full" src="./images/rock.png" alt="">
+            </li>
+            <li
+                class="rps-img h-[100px] xl:h-[130px] min-[1640px]:h-[150px] lg:opacity-75 lg:hover:opacity-100 transition cursor-pointer p-2 bg-white rounded-full" data-choice="Paper">
+                <img class="h-full w-full" src="./images/paper.png" alt="">
+            </li>
+            <li
+                class="rps-img h-[100px] xl:h-[130px] min-[1640px]:h-[150px] lg:opacity-75 lg:hover:opacity-100 transition cursor-pointer p-2 bg-white rounded-full" data-choice="Scissors">
+                <img class="h-full w-full" src="./images/scissors.png" alt="">
+            </li>
+        </ul>
+        <div class="text-center">
+            <h4 class="text-[1.3rem] font-semibold mb-2">Choose Wise</h4>
+            <p>No. of Rounds: <span class="rounds-txt">5</span></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>

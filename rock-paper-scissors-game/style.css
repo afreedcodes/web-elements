@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    background: var(--iris-ice);
+}
+
+:root {
+    /* Dark theme */
+    --primary: #5f27cd;
+    --secondary: #dee4ef;
+    --tertiary: #151728;
+    --text-light: #ffffff;
+
+    /* Light theme */
+    --text-dark: #1a1a1a;
+
+    /* Others */
+    --bright: #ffffff;
+    --grey: #858792;
+    --light-grey: #3b3d49;
+    --iris-ice: #dee4ef;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 12px;
+}
+
+h6 {
+    font-size: 10px;
+}
+
+.text {
+    font-size: .9rem;
+}
+
+.border-primary {
+    border-color: var(--primary);
+}
+
+.text-primary {
+    color: var(--primary)
+}
+
+.bg-primary {
+    background-color: var(--primary)
+}
+
+.bg-iris-ice {
+    background-color: var(--iris-ice);
+}
+
+.btn {
+    width: auto;
+    padding: 2px 20px;
+    border-radius: 2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
+    outline: 0;
+}
+
+.btn-primary {
+    background: #5f27cd;
+    border: 2px solid #5f27cd;
+    color: var(--bright);
+}
+
+.btn-primary:hover {
+    background: #5e27cde5;
+    border: 2px solid #5e27cde5;
+}
+
+.btn-outline {
+    background: none;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    border: 2px solid #5e27cde5;
+}
+
+.btn-sm {
+    padding: 2px 20px
+}
+
+.btn-lg {
+    padding: 4px 20px
+}
+
+.flex-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.img-left img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.img-right, .img-left {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.rps-img.active{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 980px !important;
+        /* height: 100vh; */
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1080px !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200px !important;
+    }
+}
