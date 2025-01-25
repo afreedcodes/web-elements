@@ -43,17 +43,21 @@ const rpsFunc = (btn) => {
                 if (botScore > userScore) {
                     modalImgEle.src = "./images/emoji-bot.jpg"
                     modalTextEle.textContent = "Bot Wins!"
-                } else if (userChoice > botChoice) {
+                } else if (userScore > botScore) {
                     modalImgEle.src = "./images/emoji-partying.jpg"
                     modalTextEle.textContent = "Congrats You Win!"
                 } else {
                     modalImgEle.src = "./images/emoji-nothing.png"
                     modalTextEle.textContent = "Nobody Wins!"
                 }
-            }, 3000)
+            }, 3300)
         }
 
         btn.classList.add("active")
+        rpsBtnsEle.forEach((btn) => {
+            btn.style.pointerEvents = "none";
+        });
+
         imgBoxLeftEle.style.animationName = "blink"
         imgBoxRightEle.style.animationName = "blink"
 
@@ -62,6 +66,9 @@ const rpsFunc = (btn) => {
             imgBoxRightEle.style.animationName = "none"
 
             btn.classList.remove("active")
+            rpsBtnsEle.forEach((btn) => {
+                btn.style.pointerEvents = "auto";
+            });
         }, timeOut)
 
         if (userChoice === "Rock" && botChoice === "Paper") {
