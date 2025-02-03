@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container flex-1 py-20 px-5">
+        <div class="w-full md:w-[70%] lg:w-[50%] xl:w-[40%] min-[1640px]:w-[30%] bg-white rounded-lg p-6">
+            <h2 class="text-center text-2xl font-semibold mb-5">Password Generator</h2>
+            <div class="text-box relative bg-tertiary text-white rounded-lg text-center p-6 overflow-hidden">
+                <h4 class="pass-txt relative w-full select-none overflow-hidden">CLICK GENERATE</h4>
+                <span class="cp-btn hidden absolute top-3 right-4 p-2 px-3.5 rounded-full bg-white text-black text-lg cursor-pointer"><i
+                        class="fa-solid fa-copy"></i></span>
+            </div>
+            <div class="mt-4">
+                <span class="text-sm font-semibold uppercase tracking-wide opacity-50 mb-1">Length</span> <span
+                    class="p-length-txt text-sm font-semibold tracking-wide">4</span>
+                <div class="form-group flex justify-center items-center gap-3 bg-gray-200 rounded-lg p-5 py-7 mb-3">
+                    <span class="text-sm font-semibold">4</span>
+                    <input class="form-control" id="length-slider" type="range" name="pass-length" min="4" max="32"
+                        value="4" oninput="slider()">
+                    <span class="text-sm font-semibold">32</span>
+                </div>
+            </div>
+            <div>
+                <span class="text-sm font-semibold uppercase tracking-wide opacity-50 mb-1">SETTINGS</span>
+                <div class="form-group bg-gray-200 rounded-lg flex justify-between items-center p-5 mb-3">
+                    <label for="uppercase">Include Uppercase</label>
+                    <label class="switch">
+                        <input type="checkbox" name="pass-uppercase" id="uppercase" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group bg-gray-200 rounded-lg flex justify-between items-center p-5 mb-3">
+                    <label for="">Include Lowercase</label>
+                    <label class="switch opacity-50">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group bg-gray-200 rounded-lg flex justify-between items-center p-5 mb-3">
+                    <label for="numbers">Include Numbers</label>
+                    <label class="switch">
+                        <input type="checkbox" name="pass-numbers" id="numbers" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group bg-gray-200 rounded-lg flex justify-between items-center p-5 mb-3">
+                    <label for="symbols">Include Symbols</label>
+                    <label class="switch">
+                        <input type="checkbox" name="pass-symbols" id="symbols">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <button class="w-full btn btn-lg btn-primary" onclick="handlePassword()">Generate Password</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
