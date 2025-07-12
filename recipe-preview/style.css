@@ -94,7 +94,7 @@ body {
     top: -40px;
     left: 0;
     width: auto;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 600;
     line-height: 1.1rem;
     text-transform: capitalize;
@@ -226,12 +226,12 @@ body {
         font-size: 1rem;
     }
 
-    .wrapper{
+    .wrapper {
         height: 300px;
         width: 300px;
     }
 
-    .wrapper .item{
+    .wrapper .item {
         height: 45px;
         width: 45px;
     }
@@ -240,7 +240,7 @@ body {
         left: 85%;
     }
 
-    .main-dish{
+    .main-dish {
         top: 15%;
         left: 15%;
         height: 200px;
@@ -252,9 +252,10 @@ body {
     .container {
         max-width: 1080px !important;
         gap: 4rem;
+        padding: 8rem;
     }
 
-    .wrapper .item{
+    .wrapper .item {
         height: 50px;
         width: 50px;
     }
@@ -262,7 +263,11 @@ body {
     .wrapper:hover .item:nth-child(5) {
         left: 94%;
     }
-    
+
+    .wrapper:hover .item:nth-child(6)::before {
+        left: -100%;
+    }
+
 }
 
 @media (min-width: 1440px) {
@@ -280,29 +285,33 @@ body {
         max-width: 1300px !important;
     }
 
-    .container .col{
+    .container .col {
         height: 600px;
     }
 
-    .container .col:hover{
+    .container .col:hover {
         transform: scale(1.05);
     }
 
-    .wrapper{
+    .wrapper {
         height: 350px;
         width: 350px;
     }
 
-    .wrapper .item{
+    .wrapper .item {
         height: 70px;
         width: 70px;
     }
 
-    .main-dish{
+    .main-dish {
         top: 15%;
-        left: 18%;
+        left: 15%;
         height: 250px;
         width: 250px;
+    }
+
+    .wrapper:hover .item:nth-child(6)::before {
+        left: -80%;
     }
 }
 
@@ -319,18 +328,21 @@ body {
         font-size: 1.4rem;
     }
 
-    .wrapper{
+    .wrapper {
         height: 450px;
         width: 450px;
-        /* margin-top: 5rem; */
     }
 
-    .wrapper .item{
+    .wrapper .item {
         height: 80px;
         width: 80px;
     }
 
-    .main-dish{
+    .wrapper:hover .item:nth-child(6)::before {
+        left: 0%;
+    }
+
+    .main-dish {
         top: 15%;
         left: 18%;
         height: 300px;
